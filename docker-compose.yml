@@ -1,0 +1,16 @@
+services:
+  fastapi-instance1:
+    build:
+      context: ./test
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80" # Maps container port 80 to host port 8000
+    restart: always
+
+  fastapi-instance2:
+    build:
+      context: ./test
+      dockerfile: Dockerfile
+    ports:
+      - "8001:80" # Maps container port 80 to host port 8001
+    restart: always
