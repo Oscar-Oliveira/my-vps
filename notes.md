@@ -27,4 +27,14 @@ docker run -p 8000:80 test_api1
 docker run -d -p 8000:80 test_api1
 
 docker stop c5b8e0e711c3
+
+docker system prune -a -f --volumes
+
 ```
+
+on moodle instalation
+server: postgres!
+port: 5432
+
+
+https://www.youtube.com/watch?v=V3ZuwaZ4bLM

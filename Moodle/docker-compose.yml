@@ -15,9 +15,9 @@ services:
   postgres:
     image: postgres:17-alpine
     environment:
-      - POSTGRES_DB=moodle
-      - POSTGRES_USER=moodle_user
-      - POSTGRES_PASSWORD=moodle_password
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
       - pgdata:/var/lib/postgresql/data
 
@@ -26,8 +26,8 @@ services:
     ports:
       - "81:80"
     environment:
-      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
-      - PGADMIN_DEFAULT_PASSWORD=admin
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
     depends_on:
       - postgres
 
